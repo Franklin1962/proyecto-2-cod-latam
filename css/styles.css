@@ -1,0 +1,309 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+
+
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif sans-serif;
+}
+
+
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+body {
+    background-color: #fbfbfb;
+    font-size: 18px;
+    line-height: 1.2;  
+}
+
+header {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    border-bottom: groove 3px #f0f0f0 ;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+
+header nav a{
+    font-weight: 600;
+    padding: 15px;
+}
+nav a:hover{
+    color: #af599b;
+    box-shadow: 5px 15px 15px rgba(0,0,0,-35)
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#nicio{
+    display: flex;
+    min-width: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #0f0f0f;
+}
+
+#inicio figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#inicio img{
+    border-radius: 50%;
+    width: 400px;
+    justify-content: center;
+    align-items: center; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+} 
+
+#inicio p{
+    display: flex;
+    text-align: center ;
+    color: #0f0f0f;
+}
+
+h1{
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.descarga{
+    height: 6vh;
+    display: flex;
+    width: 193px;
+    justify-content: center;  
+    align-items: center;
+    background-color: #af599b;
+    border-radius: 300px;
+    color: #fbfbfb;
+    font-size: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 160px;
+    box-shadow: 5px 15px 15px rgba(0,0,0,-35);
+    transition: .3s ease;
+}
+div.descarga a:hover{
+    padding: 25px;
+    border: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    transform:translate (-3px) scale(1.05);
+    box-shadow: 0 0 157px rgb(202, 94, 112),
+                0 0 45px rgb(202, 94, 112),
+                0 0 75px rgb(202, 94, 112),
+                0 0 115px rgb(202, 94, 112);
+
+}
+
+#contacto{
+    min-height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 65vh;
+    display: flexbox ; 
+    border-radius: 10px;
+    background-color:rgba(175,89,158,0.3);
+    color: #0f0f0f;
+    margin-top: 30px;
+    padding: 30px;
+    
+}
+#contacto p{   
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    padding: 4px;
+}
+
+.titulo{
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+#contacto .fa-house{
+    display: flex;
+    color: blue;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+#contacto .fa-phone{
+    display: flex;
+    color:  cornflowerblue;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+#contacto .fa-whatsapp{
+display: flex;
+    color: rgb(17, 207, 17);
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.rs{
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    color:darkblue ;
+    transform: translate(-50,-50);
+}  
+
+.rs ul li{
+    display: inline-block ;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.rs u li a i{
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,-25);
+    transition: .3s ease;
+
+
+}
+footer{
+    height: 90px;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    background-color: #af599b;
+    color: #fbfbfb;
+    text-align:center;
+    padding: 30px;
+}
+
+:root{
+    --email: #e4405f;
+    --linkedin: #007785;
+    --github: #1a61e6;
+}
+
+.rs ul li a{
+    transform: translate3d (-3px) scale(1.05);
+    box-shadow: 0 5px 5px 10px white;
+    border-radius: 10px;
+}
+
+.rs ul li .email:hover{
+    background: var(--email);
+    box-shadow: 0 0 15px var(--email),
+                0 0 45px var(--email),
+                0 0 75px var(--email),
+                0 0 115px var(--email);
+
+}
+
+.rs ul li .github:hover{
+    background: var(--github);
+    color: pink;
+    box-shadow: 0 0 15px #1a61e6,
+                0 0 45px #1a61e6,
+                0 0 75px #1a61e6,
+                0 0 115px #1a61e6;
+}
+.rs ul li .linkedin:hover{
+    background: var(--linkedin);
+    color: grey;
+    box-shadow: 0 0 15px #007585,
+                0 0 45px #007585,
+                0 0 75px #007585,
+                0 0 115px #007585;
+}
+
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/

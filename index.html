@@ -12,33 +12,46 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!--Imagen Favaicon-->
+    <link rel="shortcut icon" href="/img/Logo Franklin favicon.png" type="image/x-icon">
+
 </head>
 <body>
-    
     <header>           
         <div class="logo">
             <img src="./img/Logo Franklin.png"  alt="logo">
         </div>
         <nav> 
-            <a href="inicio" class="nav-link">Inicio</a>
-            <a href="contacto" class="nav-link" >Contacto</a>
+            <button class="abrirMenu" aria-label="abrir menu">
+                <img src="/img/menu.jpeg" alt="menu">
+            </button>
+            <button  class="cerrarMenu" aria label="cerrar menu">
+                <img src="/img/salida.png" alt="cerrar menu">
+            </button>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
     </header>
     
-        <main>
-        <section id="inicio">
-            <figure>
-                <img src="./img/Foto-personal.jpg" alt="foto" >
-            </figure>
-                <h1>Hola! soy Franklin</h1>
-                    <p> Soy técnico medio en administración con experiencia en finanzas y contabilidad. Con habilidades demostradas en la gestión de proyectos y liderazgo de equipos. Capaz de trabajar bajo presión y tomar decisiones críticas. Con habilidades analíticas y capacidad para resolver problemas. Excelente comunicador y con habilidades interpersonales para trabajar en equipo.
-                        Actualmente me encuentro estudiando diseño web y tengo conocimiento en los lenguajes de programacion  HTML, CSS y JS. Me encanta trabajar en proyectos creativos y desafiantes que me permitan mejorar mis habilidades y aprender cosas nuevas. Estoy trabajado en varios proyectos personales que me han permitido desarrollar mi capacidad para crear diseños atractivos y funcionales.
-                        Estoy buscando oportunidades para trabajar en un entorno dinámico donde pueda seguir aprendiendo y creciendo como diseñador web.
-                    </p> 
+    
+        <section id="inicio">  
+            <div>
+                <img src="./img/Foto-personal.jpg" alt="foto" >           
+            </div>
+            <div class="parrafo">
+              <h1> Hola! Soy Franklin</h1>
+                <p> Soy técnico medio en administración con experiencia en finanzas y contabilidad. Con habilidades demostradas en la gestión de proyectos y liderazgo de equipos. Capaz de trabajar bajo presión y tomar decisiones críticas. Con habilidades analíticas y capacidad para resolver problemas. Excelente comunicador y con habilidades interpersonales para trabajar en equipo.
+                    Actualmente me encuentro estudiando diseño web y tengo conocimiento en los lenguajes de programacion  HTML, CSS y JS. Me encanta trabajar en proyectos creativos y desafiantes que me permitan mejorar mis habilidades y aprender cosas nuevas. Estoy trabajado en varios proyectos personales que me han permitido desarrollar mi capacidad para crear diseños atractivos y funcionales.
+                    Estoy buscando oportunidades para trabajar en un entorno dinámico donde pueda seguir aprendiendo y creciendo como diseñador web.
+                </p> 
+            </div>
 
-                <div class="descarga">
-                    <a href="./Curriculun.pdf"> Descargar mi CV </a>
-                </div>
+            <div class="descarga">
+               <a href="./Curriculun.pdf"> Descargar mi CV </a>
+            </div>
                 
         </section>
         <section id="contacto">
@@ -46,22 +59,22 @@
                 <h2> Hablemos!</h2>
             </div>
                 <div class="informacion">
-                    <i class="fa-solid fa-house"></i>
-                        <p> Av. Juan de Garay 1702 C.A.B.A.</p>
-                    <i class="fa-solid fa-phone"></i>
-                        <P> +54 11 3808 0419</P>
-                    <i class="fa-brands fa-whatsapp"></i>
-                        <P> +54 11 3808 0419</P>
-                </div>
-        </section>
-            <div class="rs" >
-                <ul>
-                    <li><a href="mailto:pereirafranklin25@gmail.com" class="email"><i class="fa-solid fa-envelope-open-text"></i></a></li>
-                    <li><a href="https://github.com/Franklin1962"class="github" ><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
-                </ul>
+                <i class="fa-solid fa-house"></i>
+                    <p> Av. Juan de Garay 1702 C.A.B.A.</p>
+                <i class="fa-solid fa-phone"></i>
+                    <P> +54 11 3808 0419</P>
+                <i class="fa-brands fa-whatsapp"></i>
+                    <P> +54 11 3808 0419</P>
             </div>
-        </main>
+    </section>
+        <div class="rs" >
+            <ul>
+                <li><a href="mailto:pereirafranklin25@gmail.com" class="email"><i class="fa-solid fa-envelope-open-text"></i></a></li>
+                <li><a href="https://github.com/Franklin1962"class="github" ><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
     <footer>
         <p> Franklin Pereira </p>
     </footer>
@@ -69,5 +82,7 @@
     <!-- La estructura básica y la vinculación con CSS estan listas. A codear! 💪  -->
     <!-- En este archivo escriban su HTML -->
 
+    <!--Enlace a javascript-->
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -44,91 +44,109 @@ body {
 header {
     display: flex;
     height: 90px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    position: sticky;
+    position: fixed;
+    background-color: #78909c;
+    box-shadow: 0 4px 5px #cfc8c8;
+    left: 0;
     top: 0;
-    border-bottom: groove 3px #f0f0f0 ;
 }
 
-.logo{
-    display: flex;
-}
 
 .logo img{
     border-radius: 50%;
     height: 70px;
     width: 70px;
+    
+
+    
 }
 
-header nav a{
+
+.menu{
+    display: flex;
+    align-items: center;
+
+}
+
+.menu li{
     font-weight: 600;
     padding: 15px;
+
+
 }
-nav a:hover{
-    color: #af599b;
+.abrirMenu{
+    display: none;
+
+}
+
+.cerrarMenu{
+    display: none;
+
+}
+
+.menu a:hover{
+    color: white;
     box-shadow: 5px 15px 15px rgba(0,0,0,-35)
 }
 
 /* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
 *  el margin: auto; para tenerlo centrado fácilmente ;)
 */
-main {
-    max-width: 1200px;
-    margin: auto;
+/*main {
+    max-width: 1260px;
+    display: flex;
+}*/
+
+#inicio{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    
 }
 
-#nicio{
-    display: flex;
-    min-width: 100vh;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #0f0f0f;
-}
 
-#inicio figure{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-}
 
 #inicio img{
+    display: flex;
     border-radius: 50%;
     width: 400px;
-    justify-content: center;
-    align-items: center; 
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-} 
+    align-items: center;
+    text-align: center;
+    margin: auto;
 
-#inicio p{
-    display: flex;
-    text-align: center ;
-    color: #0f0f0f;
+}
+
+.parrafo{
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    justify-content: center;
+    padding: 15px;
+    
 }
 
 h1{
-    text-align: center;
+    text-align: center ;
     font-size: 36px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    color: #0f0f0f;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
+
+
 .descarga{
-    height: 6vh;
     display: flex;
-    width: 193px;
+    height: 30px;
+    width: 195px;
     justify-content: center;  
     align-items: center;
     background-color: #af599b;
-    border-radius: 300px;
+    border-radius: 20px;
     color: #fbfbfb;
     font-size: 20px;
     margin-left:auto;
@@ -138,12 +156,8 @@ h1{
     box-shadow: 5px 15px 15px rgba(0,0,0,-35);
     transition: .3s ease;
 }
-div.descarga a:hover{
-    padding: 25px;
-    border: 20px;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
+
+.descarga a:hover{
     transform:translate (-3px) scale(1.05);
     box-shadow: 0 0 157px rgb(202, 94, 112),
                 0 0 45px rgb(202, 94, 112),
@@ -153,10 +167,9 @@ div.descarga a:hover{
 }
 
 #contacto{
-    min-height: 100%;
     margin-right: auto;
     margin-left: auto;
-    height: 65vh;
+    width: 100%;
     display: flexbox ; 
     border-radius: 10px;
     background-color:rgba(175,89,158,0.3);
@@ -166,7 +179,6 @@ div.descarga a:hover{
     
 }
 #contacto p{   
-    display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 20px;
@@ -242,7 +254,7 @@ display: flex;
 }
 footer{
     height: 90px;
-    display: flexbox;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: #af599b;
@@ -269,12 +281,10 @@ footer{
                 0 0 45px var(--email),
                 0 0 75px var(--email),
                 0 0 115px var(--email);
-
 }
 
 .rs ul li .github:hover{
     background: var(--github);
-    color: pink;
     box-shadow: 0 0 15px #1a61e6,
                 0 0 45px #1a61e6,
                 0 0 75px #1a61e6,
@@ -282,28 +292,86 @@ footer{
 }
 .rs ul li .linkedin:hover{
     background: var(--linkedin);
-    color: grey;
     box-shadow: 0 0 15px #007585,
                 0 0 45px #007585,
                 0 0 75px #007585,
                 0 0 115px #007585;
 }
+/************************************
+*** Aplicacion de las media query****
+*************************************/
+
+@media (max-width: 600px) {
+    
+    #inicio{
+        background-color: #1a61e6;
+        margin-top: 0;
+    }
+    #inicio img{
+        border-radius: 50%;
+        width: 300px;
+        justify-content: center;
+        align-items: center; 
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+
+    header{
+        background-color: #4ca4ec;
+    }
 
 
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        color: white;
+        opacity: 1;
+        height: 100%;
+
+
+
+     
+    }
+    
+    .menu li{
+        font-weight: 600;
+        padding: 0;
+        line-height: 30px;
+        
+
+    /*.menu a{
+        align-items: center;
+        text-align: center;
+    }*/
+
+    }
+    .abrirMenu,.cerrarMenu{
+        border: none;
+        align-self: flex-end;
+        display: block;
+        /*opacity: 0.5;
+        transition: opacity 0,5;
+        color: gray;*/
+
+    }    
+    .abrirMenu img{
+        height: 30px;
+        width: 30px;
+        align-self: flex-end;
+    
+    }
+
+        .cerrarMenu img{
+        height: 30px;
+        width: 30px;
+        padding: 15x 20px;
+        align-self: flex-end;
+    }
+    
+}

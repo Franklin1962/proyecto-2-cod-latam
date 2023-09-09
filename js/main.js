@@ -1,9 +1,12 @@
-const abrirmenuBtn = document.querySelector(".abrirMenu");
-const cerrarMenuBtn = document.querySelector(".cerrarMenu");
-
-function abrirMenu() {
-    abrirMenu.classList.add("abrirMenu");
-}
-
-abrirmenuBtn.addEventListener("click", abrirMenu);
-cerrarMenuBtn.addEventListener("click", cerrarMenuBtn)
+document.addEventListener('DOMContentLoaded', function() {
+    var navbarToggle = document.querySelector('#navbar-checkbox');
+    
+    navbarToggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('navbar-open');
+      } else {
+        document.body.classList.remove('navbar-open');
+      }
+    });
+  });
+  
